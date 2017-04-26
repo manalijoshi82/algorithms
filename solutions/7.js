@@ -21,7 +21,6 @@ const getMaxAmongIndices = (arr, indicesArray) => {
 }
 
 const getMax = (arr) => {
-  //console.log('arr:', arr);
   let max = 0;
   for(let i=0; i < arr.length; i++) {
     if(arr[i] > max) {
@@ -35,12 +34,8 @@ const getLongestInc = (arr) => {
   let finalResultsArray = [];
   for(let i=0; i < arr.length; i++) {
     let indicesArray = getIndicesOfSmallerVals(arr, i);
-    if(indicesArray.length === 0) {
-      finalResultsArray[i] = 1;
-    } else {
-      let maxVal = getMaxAmongIndices(finalResultsArray, indicesArray);
-      finalResultsArray[i] = maxVal + 1;
-    }
+    let maxVal = getMaxAmongIndices(finalResultsArray, indicesArray);
+    finalResultsArray[i] = maxVal + 1;
   }
   return getMax(finalResultsArray);
 }
