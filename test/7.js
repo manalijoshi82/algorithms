@@ -1,7 +1,8 @@
 const expect = require('chai').expect;
-// require your getLongestInc function
+const arrayOp = require('../solutions/7');
+const getLongestInc = arrayOp.getLongestInc;
 
-/* describe('getLongestInc', () => {
+describe('getLongestInc', () => {
     it('should return the number of longest increasing numbers in an array', () => {
       let arr = [2,3];
       expect(getLongestInc(arr)).to.equal(2);
@@ -23,6 +24,9 @@ const expect = require('chai').expect;
 
       arr = [4,7,5,4,20,10];
       expect(getLongestInc(arr)).to.equal(3);
-    });
+
+      arr = [1,3,5,2,4,7];
+      expect(getLongestInc(arr)).to.equal(4);
+  });
 });
-*/
+
